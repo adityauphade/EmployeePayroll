@@ -59,14 +59,18 @@ body{
     justify-content: center;
 }
 
+form{
+    line-height: 3.5;
+
+}
+
 .box{
-    line-height: 3;
     background-color: #FFF;
     color: #505050;
     display: flex;
     justify-content: flex-start;
     width: 40vw;
-    height: 80vh;
+    /* height: 80vh; */
     flex-direction: column;
     margin:  10px auto;
     padding: 25px;
@@ -97,7 +101,7 @@ body{
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin: 10px 0px;
+    margin: 15px 0px;
     color: #505050;
     border: 2px solid #505050;
     border-radius: 5px;
@@ -213,7 +217,7 @@ body{
 
 .notes{
     font-size: var(--box-category-titleSize);
-    margin: 10px 0px;
+    margin: 10px 0px 20px 0px;
     display: flex;
     /* align-items: flex-end; */
 }
@@ -230,4 +234,22 @@ body{
     font-size: var(--box-input-size);
     width: 100%;
     color: #505050;
+}
+
+
+/* //BUTTONS */
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttons button{
+    font-size: var(--box-input-size);
+    border: 2px solid #505050;
+    border-radius: 5px;
+    color: #505050;
+    padding: 10px 20px;
+    
 }

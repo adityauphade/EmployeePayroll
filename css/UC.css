@@ -190,6 +190,24 @@ form{
 
 
 /* //SALARY */
+.salary{
+    display: flex;
+    align-items: center;
+    font-size: var(--box-category-titleSize);
+}
+
+.salary label{
+    margin-right: var(--between-label);
+}
+
+.salary input{
+    width: 100%;
+    margin-right: var(--between-input);
+}
+
+value{
+    font-size: var(--box-category-choiceSize);
+}
 
 
 /* //DATE */
@@ -234,6 +252,7 @@ form{
     font-size: var(--box-input-size);
     width: 100%;
     color: #505050;
+    padding: 5px;
 }
 
 
@@ -244,12 +263,18 @@ form{
     align-items: center;
     justify-content: space-between;
 }
-
+    
 .buttons button{
     font-size: var(--box-input-size);
     border: 2px solid #505050;
     border-radius: 5px;
     color: #505050;
     padding: 10px 20px;
+    text-align: center;
+}
+    
+
+.formButtons button{
+    margin-left: var(--between-input);
     
 }

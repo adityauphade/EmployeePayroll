@@ -63,18 +63,16 @@
                     <label for="Others">Others</label>
                 </div>
             </div>
+
             <div class="salary">
                 <label for="Salary:">Salary</label>
-                <select>
-                    <option value="" disabled selected hidden>Select Category</option>
-                    <option value="1">Category 1</option>
-                    <option value="2">Category 1</option>
-                    <option value="3">Category 1</option>
-                </select>
+                <input type="range" min="10000" max="100000" value="10000" id="Range">
+                <div id="salary">10000</div>
             </div>
+
             <div class="startdate">
                 <label>Start Date</label>
-                <input type="date" value="02-08-21" min="2021-08-02" max="2021-09-02" id="StartDate">
+                <input type="date" value="2021-08-02" min="2021-08-02" max="2021-09-02" id="StartDate">
             </div>
             <div class="notes">
                 <label for="Notes">Notes</label>
@@ -89,5 +87,6 @@
             </div>
         </div>
     </form>
+    <script src="/js/salary.js"></script>
 </body>
 </html>

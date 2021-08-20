@@ -4,16 +4,20 @@
 :root{
     --box-category-titleSize: 20px;
     --box-input-size:16px;
+    --box-category-choiceSize: 18px;
+    --between-label: 20px;
+    --between-input: 5px;
 }
 
 
 *{
     box-sizing: border-box;
     margin: 0px;
-    /* padding: 0px; */
     font-family: 'Josefin Sans', sans-serif;
 }
 
+
+/* //HEADER */
 
 header{
     background-color: #FFF;
@@ -45,6 +49,9 @@ header{
     color: #505050;
 }
 
+
+/* //BODY&BOX */
+
 body{
     background-color: #F7F5E7;
     display: flex;
@@ -53,12 +60,12 @@ body{
 }
 
 .box{
-    line-height: 2.5;
+    line-height: 3;
     background-color: #FFF;
     color: #505050;
     display: flex;
     justify-content: flex-start;
-    width: 30vw;
+    width: 40vw;
     height: 80vh;
     flex-direction: column;
     margin:  10px auto;
@@ -66,43 +73,114 @@ body{
     box-shadow: 0px 0px 10px 1px #C0C0C0;
 }
 
+
+/* //TITLE OF BOX */
+
 .title{
     text-align: center;
     font-size: 25px;
     text-decoration: underline;
 }
 
+
+/* //NAME */
+
 .name{
     display: flex;
     justify-content: flex-start;
+    align-content: center;
     font-size: var(--box-category-titleSize);
 }
 
 .name input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 2px solid #505050;
     border-radius: 5px;
     width: 100%;
-    margin: 8px;
+    /* height: 60%; */
+    margin: 10px 8px;
     color: #505050;
     font-size: var(--box-input-size);
 }
-/*
+
+.name label{
+    margin-right: var(--between-label);
+}
+
+
+/* //PROFILE */
+
 .profile{
+    font-size: var(--box-category-titleSize);
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+}
+
+.profile img{
+    width: 35px;
+    margin: auto;
 }
 
 .profile div{
     display: flex;
-    margin: 10px;
     align-items: center;
 }
 
+.profile label{
+    display: flex;
+    align-items: center;
+    margin-right: var(--between-label);
+}
+
 .profile input{
-    margin: 10px;
+    margin-right: var(--between-input);
 }
 
 
-input{
-    margin: 10px;
-} */
+/* //GENDER */
+
+.gender{
+    display: flex;
+    font-size: var(--box-category-titleSize);
+}
+
+.Genders{
+    display: flex;
+    align-items: center;
+}
+
+.gender label{
+    margin-right: var(--between-label);
+}
+
+.Genders label{
+    font-size: var(--box-category-choiceSize);
+}
+
+.Genders input{
+    margin-right: var(--between-input);
+}
+
+
+/* //DEPT */
+
+.dept{
+    display: flex;
+    align-items: center;
+    font-size: var(--box-category-titleSize);
+}
+
+.dept label{
+    margin-right: var(--between-label);
+}
+
+.Depts label{
+    font-size: var(--box-category-choiceSize);
+}
+
+.Depts input{
+    margin-right: var(--between-input);
+}

@@ -1,0 +1,156 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+
+:root{
+    --box-category-titleSize: 25px;
+    --box-input-size:16px;
+    --box-tablehead-fontsize: 18px;
+    --between-label: 20px;
+    --between-input: 5px;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/* //HEADER */
+
+header{
+    background-color: #FFF;
+    padding: 10px auto;
+    margin-bottom: 25px;
+}
+
+.head{
+    margin: auto;
+    display: flex;
+    width: 90%;
+    background-color: #FFF;
+    align-items: center;
+    font-size: 22px;
+}
+
+
+.head img{
+    width: 80px;
+    padding: 15px;
+    margin-left: 20px;
+}
+
+.h1{
+    color: #99BD51;
+}
+
+.h2{
+    color: #505050;
+}
+
+
+/* //BODY */
+
+body{
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box{
+    background-color: #FFF;
+    color: #505050;
+    box-shadow: 0px 0px 15px 1px #DCDCDC;
+}
+
+
+/* //OUTERBOX */
+
+.outerBox{
+    display: grid;
+    grid-template-rows: 1fr 8fr;
+    height: 100vh;
+    width: 80vw;
+    margin: auto;
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--box-category-titleSize);
+}
+
+.buttons{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.buttons a{
+    text-decoration: none;
+    color: #000;
+}
+
+button{
+    cursor: pointer;
+
+}
+
+#search img{
+    height: 42px;
+    border-radius: 100px;
+    
+}
+
+#search{
+    padding: 0px;
+    border-radius: 100px;
+    border: 3px solid #000;
+    box-shadow: 0px 0px 15px 1px #DCDCDC;
+    margin-right: var(--between-label);
+    background-color: #FFF;
+    
+}
+
+#addUser{
+    /* cursor: pointer; */
+    font-size: var(--box-tablehead-fontsize);
+    padding: 14px 26px;
+    border-radius: 5px;
+    border: 0px solid #505050;
+    background-color: #99BD51;
+
+}
+
+
+/* BOX - TABLE */
+.etable{
+    width: 100%;
+    /* padding: 20px; */
+}
+
+thead{
+    background-color: #505050;
+    color: #FFF;
+}
+
+thead th{
+    padding: 20px;
+    font-size: var(--box-tablehead-fontsize);
+}
+
+tbody td{
+    padding: 10px;
+}
+
+td{
+    text-align: center;
+}
+.e-actions img{
+    width: 25px;
+    cursor: pointer;
+    margin: 10px;
+}

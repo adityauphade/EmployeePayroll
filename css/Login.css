@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
 
 :root{
@@ -7,6 +6,8 @@
     --box-category-choiceSize: 18px;
     --between-label: 20px;
     --between-input: 5px;
+    --flex-subtitle: 1;
+    --flex-options: 6;
 }
 
 
@@ -16,13 +17,19 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 
+* button{
+    cursor: pointer;
+}
+
 
 /* //HEADER */
 
 header{
     background-color: #FFF;
-    padding: 10px auto;
-    margin-bottom: 25px;
+    margin-top: 100px;
+    width: 100%;
+    /* padding: 100px; */
+    margin: 0px auto 20px auto;
 }
 
 .head{
@@ -53,14 +60,14 @@ header{
 /* //BODY&BOX */
 
 body{
-    background-color: #F7F5E7;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    background-color: #F6F6F6;
+    width: 100%;
 }
 
-form{
+#empadd-form{
     line-height: 3.5;
+    display: grid;
+    grid-template-rows: repeat(9, 1fr);
 
 }
 
@@ -69,12 +76,12 @@ form{
     color: #505050;
     display: flex;
     justify-content: flex-start;
-    width: 40vw;
+    width: 60%;
     /* height: 80vh; */
     flex-direction: column;
     margin:  10px auto;
     padding: 25px;
-    box-shadow: 0px 0px 10px 1px #C0C0C0;
+    box-shadow: 0px 0px 15px 1px #DCDCDC;
 }
 
 
@@ -89,15 +96,16 @@ form{
 
 /* //NAME */
 
-.name{
+#name{
     display: flex;
     justify-content: flex-start;
     align-content: center;
     font-size: var(--box-category-titleSize);
 }
 
-.name input{
+#name input{
     display: flex;
+    flex: var(--flex-options);
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -108,54 +116,64 @@ form{
     font-size: var(--box-input-size);
 }
 
-.name label{
+#name label{
+    flex: var(--flex-subtitle);
     margin-right: var(--between-label);
 }
 
 
 /* //PROFILE */
 
-.profile{
+#profile{
     font-size: var(--box-category-titleSize);
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
-.profile img{
+#profile img{
     width: 35px;
-    margin: auto;
+    /* margin: auto; */
+    margin-left: var(--between-label);
 }
 
-.profile div{
-    display: flex;
-    align-items: center;
-}
-
-.profile label{
+#profile label{
+    flex: var(--flex-subtitle);
     display: flex;
     align-items: center;
     margin-right: var(--between-label);
 }
 
-.profile input{
+.ProfileOptions{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: var(--flex-options);
+}
+
+#profile input{
     margin-right: var(--between-input);
 }
 
 
 /* //GENDER */
 
-.gender{
+#gender{
     display: flex;
     font-size: var(--box-category-titleSize);
 }
 
 .Genders{
+    flex: var(--flex-options);
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+
+    justify-content: flex-start;
 }
 
-.gender label{
+#gender label{
+    flex: var(--flex-subtitle);
     margin-right: var(--between-label);
 }
 
@@ -170,14 +188,19 @@ form{
 
 /* //DEPT */
 
-.dept{
+#dept{
     display: flex;
     align-items: center;
     font-size: var(--box-category-titleSize);
 }
 
-.dept label{
+#dept label{
     margin-right: var(--between-label);
+    flex: var(--flex-subtitle);
+}
+
+.Depts{
+    flex: var(--flex-options);
 }
 
 .Depts label{
@@ -190,63 +213,79 @@ form{
 
 
 /* //SALARY */
-.salary{
+#salary{
     display: flex;
     align-items: center;
     font-size: var(--box-category-titleSize);
 }
 
-.salary label{
+#salary label{
+    flex: var(--flex-subtitle);
     margin-right: var(--between-label);
 }
 
-.salary input{
+.salaryBar input{
+    /* flex: var(--flex-options); */
     width: 100%;
-    margin-right: var(--between-input);
+    margin-right: var(--between-label);
 }
 
-value{
-    font-size: var(--box-category-choiceSize);
+.salaryBar{
+    display: flex;
+    align-items: center;
+    flex: var(--flex-options);
 }
-
 
 /* //DATE */
 
-.startdate{
+#startdate{
     font-size: var(--box-category-titleSize);
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-.startdate label{
+#startdate label{
+    flex: var(--flex-subtitle);
     margin-right: var(--between-label);
 }
 
-.startdate input{
+.DateInput select{
     border: 2px solid #505050;
     border-radius: 5px;
     font-size: var(--box-input-size);
-    width: 50%;
+    width: 30%;
     color: #505050;
+    margin-right: var(--between-input);
+    padding: var(--between-input);
+}
+
+.DateInput{
+    flex: var(--flex-options);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
 /* //NOTES */
 
-.notes{
+#notes{
     font-size: var(--box-category-titleSize);
     margin: 10px 0px 20px 0px;
     display: flex;
     /* align-items: flex-end; */
 }
 
-.notes label{
+#notes label{
+    flex: var(--flex-subtitle);
     margin-right: var(--between-label);
     display: flex;
     align-items: flex-start;
 }
 
-.notes textarea{
+#notes textarea{
+    flex: var(--flex-options);
     border: 2px solid #505050;
     border-radius: 5px;
     font-size: var(--box-input-size);
@@ -277,4 +316,25 @@ value{
 .formButtons button{
     margin-left: var(--between-input);
     
+}
+
+.row-content input{
+    outline: none;
+}
+
+.row-content.error input{
+    border-color: #FF0000 !important;
+}
+
+.row-content.success input{
+    border-color: #3FA600 !important;
+}
+
+.DateInput.error select{
+    border-color: #FF0000 !important;
+    
+}
+
+.DateInput.success select{
+    border-color: #3FA600 !important;
 }

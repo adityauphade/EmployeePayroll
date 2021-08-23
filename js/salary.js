@@ -1,5 +1,5 @@
 var slider = document.getElementById("Range");
-var output = document.getElementById("salary");
+var output = document.getElementById("salary_value");
 
 output.innerHTML = slider.value;
 

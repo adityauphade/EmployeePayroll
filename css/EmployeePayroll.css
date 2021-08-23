@@ -63,6 +63,8 @@ body{
     background-color: #FFF;
     color: #505050;
     box-shadow: 0px 0px 15px 1px #DCDCDC;
+    width: 100%;
+    padding: 0px;
 }
 
 
@@ -85,8 +87,11 @@ body{
 
 .head-left{
     display: flex;
-    align-items: center;
-    
+    align-items: center;    
+}
+
+.head-left head{
+    text-decoration: none;
 }
 
 #count{
@@ -94,6 +99,7 @@ body{
     padding: 14px 16px;
     font-size: var(--box-tablehead-fontsize);
     /* padding: 14px 20px; */
+    text-decoration: none;
     border-radius: 100px;
     border: 0px solid #505050;
     background-color: #99BD51;

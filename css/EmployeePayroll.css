@@ -83,6 +83,24 @@ body{
     font-size: var(--box-category-titleSize);
 }
 
+.head-left{
+    display: flex;
+    align-items: center;
+    
+}
+
+.count{
+    margin-left: 10px;
+    padding: 14px 16px;
+    font-size: var(--box-tablehead-fontsize);
+    /* padding: 14px 20px; */
+    border-radius: 100px;
+    border: 0px solid #505050;
+    background-color: #99BD51;
+}
+
+
+
 .buttons{
     text-decoration: none;
     display: flex;
@@ -127,29 +145,29 @@ button{
 
 
 /* BOX - TABLE */
-.etable{
+.payroll-table{
     width: 100%;
     /* padding: 20px; */
 }
 
-thead{
+.payroll-table thead{
     background-color: #505050;
     color: #FFF;
 }
 
-thead th{
+.payroll-table thead th{
     padding: 20px;
     font-size: var(--box-tablehead-fontsize);
 }
 
-tbody td{
+.payroll-table tbody td{
     padding: 10px;
 }
 
-td{
+.payroll-table td{
     text-align: center;
 }
-.e-actions img{
+.payroll-table-actions img{
     width: 25px;
     cursor: pointer;
     margin: 10px;

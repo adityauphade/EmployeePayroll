@@ -45,13 +45,6 @@ document.getElementById("nameId").onkeyup = function(event){
 }
 
 
-// while adding date validate
-// document.getElementById(`DateInput`).onkeyup = function(event){
-//     console.
-//     checkdate(event.target, )
-// }
-
-
 document.getElementById("empadd-form").onsubmit = function(event){
     event.preventDefault();
     //tags to get values from html

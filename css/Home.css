@@ -178,3 +178,12 @@ button{
     cursor: pointer;
     margin: 10px;
 }
+.e-department{
+    background-color: wheat;
+    margin: 0px;
+    padding: 0px !important;
+    border: 20px solid #fff;
+    border-radius: 200px;
+
+
+}

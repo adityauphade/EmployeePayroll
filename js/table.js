@@ -1,8 +1,8 @@
 
-let employeeObjList = JSON.parse(localStorage.getItem(`EmployeePayrollList`));
-document.getElementById(`count`).innerText = employeeObjList.length;
 createTable();
 function createTable(){
+    let employeeObjList = JSON.parse(localStorage.getItem(`EmployeePayrollList`));
+    document.getElementById(`count`).innerText = employeeObjList.length;
     let table_header = `<thead>
         <tr>
             <th></th>
@@ -11,6 +11,7 @@ function createTable(){
             <th>Department</th>
             <th>Salary</th>
             <th>Start Date</th>
+            <th>Comment</th>
             <th>Actions</th>
         </tr>
     </thead>`
@@ -22,7 +23,7 @@ function createTable(){
         <tbody>
             <tr>
                 <td class="e-profile">
-                    <img src="../assets/Profiles/Ellipse -2.png" alt="User Profile">
+                    <img src="${obj.profile}" alt="User Profile">
                 </td>
                 <td class="e-name">
                     ${obj.name}
@@ -34,13 +35,16 @@ function createTable(){
                     ${obj.department}
                 </td>
                 <td class="e-salary">
-                    Rs. 10,000
+                    $ ${obj.salary}
                 </td>
                 <td class="e-start-date">
-                    29 Oct 2019
+                    ${obj.startdate}
+                </td>
+                <td>
+                    ${obj.note}
                 </td>
                 <td class="payroll-table-actions">
-                    <img src="/assets/Logo/delete.jpg" alt="Delete">
+                    <img onclick ="deleteID(${obj.id})" src="/assets/Logo/delete.jpg" alt="Delete">
                     <img src="/assets/Logo/edit.png" alt="Edit"> 
                 </td>
             </tr>

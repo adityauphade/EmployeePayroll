@@ -9,14 +9,43 @@ var validate_bool_name = false;
 var validate_bool_date = false;
 var validate_bool = false;
 
+//edit
+let EditKey = localStorage.getItem(`Editkey`);
+// check if this is the edit page when the page loads
+window.onload = function(){
+    if (EditKey != undefined) {
+        let PayrollObjList = JSON.parse(localStorage.getItem(`EmployeePayrollList`));
+        PayrollObjList.forEach(e => {
+            //  --SET THE PREV VALUES--
+            if (e.id == EditKey) {
+                //name
+                document.getElementById(`nameId`).value = e.name;
+                //profiles
+                document.querySelectorAll("input[name='profiles']").forEach(n => {
+                    if (n.value == e.profile) {n.checked = true;}
+                });
+                //gender
+                document.querySelectorAll("input[name='gender']").forEach(n => {
+                    if(n.value == e.gender){n.checked = true;}
+                });
+                //department
+                document.querySelectorAll("input[name='Department']").forEach(d => {
+                    if (e.department.indexOf(d.value) != -1) {d.checked = true;}
+                });
+                //salary
+                document.getElementById("Range").value = e.salary;
+                document.getElementById("salary_value").innerHTML = e.salary;
+                //date
+                document.getElementById("Month").value = e.startdate.split('/')[0];
+                document.getElementById("Day").value = e.startdate.split('/')[1];
+                document.getElementById("Year").value = e.startdate.split('/')[2];
+                //notes
+                document.getElementById("Notes").value = e.note;
+            }
+        })
+    } 
+}
 
-// class EmployeePayroll
-// let EditKey = localStorage.getItem(`Editkey`);
-// if (EditKey == undefined) {
-    
-// } else {
-    
-// } 
 
 // validate name
 function checkname(ename_tag){
@@ -35,7 +64,7 @@ function checkname(ename_tag){
     }
 }
 
-// while typing validation
+// while typing name validation
 document.getElementById("nameId").onkeyup = function(event){
     checkname(event.target);
 }
@@ -111,7 +140,6 @@ document.getElementById("empadd-form").onsubmit = function(event){
             startdate: edate,
             note: enote_tag.value
         }
-
         //call Push to local
         pushToLocal();
     }
@@ -119,22 +147,30 @@ document.getElementById("empadd-form").onsubmit = function(event){
         // push into local storage
     function pushToLocal(){
         let localPayrolllist = JSON.parse(localStorage.getItem(`EmployeePayrollList`));
-        // newdata.id = localPayrolllist.length; 
-        newdata.id = generateKey(); 
+
+        let LocalKeyArray = JSON.parse(localStorage.getItem("keys"));
         if(localPayrolllist==undefined){
+            newdata.id = generateKey();
             localPayrolllist = [newdata];
+            localStorage.setItem(`EmployeePayrollList`, JSON.stringify(localPayrolllist));
         }
         else{
-            
+            if (LocalKeyArray.indexOf(parseInt(EditKey)) == -1) {
+                newdata.id = generateKey();
+            } else {
+                localPayrolllist = localPayrolllist.filter(e => e.id != EditKey);
+                newdata.id = parseInt(EditKey);
+            }
             localPayrolllist.push(newdata)
+            localStorage.removeItem(`Editkey`);
         }
+         
         localStorage.setItem(`EmployeePayrollList`, JSON.stringify(localPayrolllist));
         
         //redirect to home page
         validate_bool_date = false;
         validate_bool_name = false;
         validate_bool = false;
-        console.log(numberList)
 
         window.location.href = "./Home.html"
         
@@ -143,42 +179,30 @@ document.getElementById("empadd-form").onsubmit = function(event){
 
 }
 
-//reset functionality
+//reset button functionality
 document.getElementById("empadd-form").onreset = function(){
-    ename_tag.parentElement.className = reset_name;
-    eday_tag.parentElement.className = reset_date;
+    document.getElementById(`nameId`).parentElement.className = reset_name;
+    document.getElementsByClassName("DateInput").className = reset_date;
 }
+
 
 //to generate key
-numberList = []
 function generateKey(){
     var key = Math.floor((Math.random()*1000));
-    var a = numberList.find(element => element == key);
-    
-    if(a != undefined){
-        generateKey();
-    }
-    else{
-        numberList.push(key);
-
-        //stores the key in the local storage
-
-        let localKeys = JSON.parse(localStorage.getItem(`keys`));
-        if (localKeys == undefined) {
-            localKeys = [key];
-            console.log(`ksjsjajsk ${typeof localKeys}`);
+    let localKeys = JSON.parse(localStorage.getItem(`keys`));
+    if (localKeys == undefined) {
+        localKeys = [key];
+        localStorage.setItem(`keys`, JSON.stringify(localKeys));
+        return key; 
+    } else {
+        var a = localKeys.find(element => element == key);
+        if(a == undefined){
+            localKeys.push(key);
+            localStorage.setItem(`keys`, JSON.stringify(localKeys));
+            return key;
         }
         else{
-            localKeys.push(key);
-        }
-        localStorage.setItem(`keys`, JSON.stringify(localKeys));
-        
-        return key;
-    }  
-}
-
-
-
-
-
-
+            generateKey();
+        }        
+    }
+}  

@@ -81,23 +81,6 @@ function deleteID(node){
 function editID(node){
     localStorage.setItem("Editkey", node);
     window.location.href = "./EmployeePayroll.html";
-    const id = localStorage.getItem(`key`);
-    console.log(id);
-    let PayrollObjList = JSON.parse(localStorage.getItem(`EmployeePayrollList`));
-    PayrollObjList.forEach(e => {
-        if (e.id === node) {
-            document.getElementById(`nameId`).value = e.name;
-            document.querySelectorAll("input[name=`profiles`]").forEach(n => {
-                if (n.value == e.profile) {n.checked = true;}
-            });
-            document.querySelectorAll("input[name=`gender`]").forEach(n => {
-                if(n.value == e.gender){n.checked = true;}
-            });
-            // console.log(`Hello`)
-        }
-        else{
-            throw `ID NOT FOUND`
-        }
-    })
+    
 
 }

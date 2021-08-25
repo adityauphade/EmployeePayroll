@@ -117,6 +117,7 @@ body{
 }
 
 #name label{
+    display: flex;
     flex: var(--flex-subtitle);
     margin-right: var(--between-label);
 }
@@ -137,6 +138,11 @@ body{
     margin-left: var(--between-label);
 }
 
+.ProfileOptions div{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
 #profile label{
     flex: var(--flex-subtitle);
     display: flex;
@@ -201,6 +207,8 @@ body{
 
 .Depts{
     flex: var(--flex-options);
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .Depts label{
@@ -209,6 +217,12 @@ body{
 
 .Depts input{
     margin-right: var(--between-input);
+}
+
+.Depts div{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
 }
 
 
@@ -339,11 +353,128 @@ body{
     border-color: #3FA600 !important;
 }
 
-.DateInput select{
-    outline: none;
+@media screen  and (max-width: 700px){
+    .box{
+        width: 95%;
+    }
+    #name{
+        flex-direction: column;
+        margin: 20px;
+        border: 20px solid white;
+    }
+    #name input{
+        padding: 7px;
+    }
+    #name label{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    #profile{
+        flex-direction: column;
+        margin: 20px;
+        border: 20px solid white;
+    }
+    #profileLabel{
+        width: 100%;
+        align-items: flex-start !important;
+        margin-right: 0px !important;
+    }
+    #profile label{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .ProfileOptions{
+        display: flex;
+        /* flex-flow: column wrap; */
+        /* padding: 10px; */
+    }
+    .ProfileOptions label{
+        padding: 10px;
+        align-items: flex-end;
+        justify-content: flex-start;
+        margin-left: 0px;
+        text-align: left;
+    }
+    .ProfileOptions input{
+        padding: 10px;
+    }
+    #gender{
+        flex-direction: column;
+        margin: 20px;
+        border: 20px solid white;
+    }
+    #dept{
+        flex-direction: column;
+        margin: 20px;
+        border: 20px solid white;
+    }
+    #deptId{
+        width: 100%;
+        align-items: flex-start !important;
+        margin-right: 0px !important;
+    }
+    #salary{
+        flex-direction: column;
+        margin: 20px;
+        border: 20px solid white;
+    }
+    #salaryId{
+        width: 100%;
+        align-items: flex-start !important;
+        margin-right: 0px !important;
+    }
+    .salaryBar{
+        width: 100%;
+    }
+    #startdate{
+        flex-direction: column;
+        margin: 20px;
+        border: 20px solid white;
+    }
+    #dateId{
+        width: 100%;
+        align-items: flex-start !important;
+        margin-right: 0px !important;
+    }
+    .DateInput{
+        width: 100%;
+        flex-direction: column;
+    }
+    .DateInput select{
+        margin: 20px;
+        width: 100%;
+    }
+    #notes{
+        flex-direction: column;
+        margin: 20px;
+        border: 20px solid white;
+    }
+    #noteId{
+        width: 100%;
+        align-items: flex-start !important;
+        margin-right: 0px !important;
+    }
+    #Notes{
+        padding: 10px !important;
+    }
+    .buttons button{
+        padding: 15px 30px;
+        font-size: var(--box-category-titleSize);
+    }
+    #gender{
+        flex-direction: column;
+        margin: 20px;
+        border: 20px solid white;
+    }
+    #genderId{
+        width: 100%;
+        align-items: flex-start !important;
+        margin-right: 0px !important;
+    }
+    .Genders label{
+        margin-right: 55px !important;
+    }
 
-}
-
-.row-content input{
-    
 }

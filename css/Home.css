@@ -21,8 +21,11 @@
 
 header{
     background-color: #FFF;
-    padding: 10px auto;
-    margin-bottom: 25px;
+    margin-top: 100px;
+    width: 100%;
+    /* padding: 100px; */
+    margin: 0px auto 20px auto;
+
 }
 
 .head{
@@ -191,6 +194,8 @@ button{
     padding: 0px !important;
     border: 20px solid #fff;
     border-radius: 200px;
+}
 
+@media screen and (max-width: 700px){
 
 }

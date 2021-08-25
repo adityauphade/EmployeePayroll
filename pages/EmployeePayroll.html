@@ -30,52 +30,76 @@
 
             <!-- PROFILE -->
             <div id="profile" class="row-content">
-                <label for="Profile">Profile</label>
+                <label id="profileLabel" for="Profile">Profile</label>
                 <div class="ProfileOptions"> 
-                    <input type="radio" name="profiles" id="p1" value="/assets/Profiles/Ellipse -1.png">
-                    <label for="p1"><img src="/assets/Profiles/Ellipse -1.png" alt="profile1"></label>
-                    <input type="radio" name="profiles" id="p2" value="/assets/Profiles/Ellipse -2.png">
-                    <label for="p2"><img src="/assets/Profiles/Ellipse -2.png" alt="profile2"></label>
-                    <input type="radio" name="profiles" id="p3" value="/assets/Profiles/Ellipse -3.png">
-                    <label for="p3"><img src="/assets/Profiles/Ellipse -3.png" alt="profile3"></label>
-                    <input type="radio" name="profiles" id="p4" value="/assets/Profiles/Ellipse -4.png">
-                    <label for="p4"><img src="/assets/Profiles/Ellipse -4.png" alt="profile3"></label>
-                    <input type="radio" name="profiles" id="p5" value="/assets/Profiles/Ellipse -5.png">
-                    <label for="p5"><img src="/assets/Profiles/Ellipse -5.png" alt="profile3"></label>
+                    <div class="p1">
+                        <input type="radio" name="profiles" id="p1" value="/assets/Profiles/Ellipse -1.png">
+                        <label for="p1"><img src="/assets/Profiles/Ellipse -1.png" alt="profile1"></label>
+                    </div>
+                    <div class="p2">
+                        <input type="radio" name="profiles" id="p2" value="/assets/Profiles/Ellipse -2.png">
+                        <label for="p2"><img src="/assets/Profiles/Ellipse -2.png" alt="profile2"></label>
+                    </div>
+                    <div class="p3">
+                        <input type="radio" name="profiles" id="p3" value="/assets/Profiles/Ellipse -3.png">
+                        <label for="p3"><img src="/assets/Profiles/Ellipse -3.png" alt="profile3"></label>
+                    </div>
+                    <div class="p4">
+                        <input type="radio" name="profiles" id="p4" value="/assets/Profiles/Ellipse -4.png">
+                        <label for="p4"><img src="/assets/Profiles/Ellipse -4.png" alt="profile3"></label>
+                    </div>
+                    <div class="p5">
+                        <input type="radio" name="profiles" id="p5" value="/assets/Profiles/Ellipse -5.png">
+                        <label for="p5"><img src="/assets/Profiles/Ellipse -5.png" alt="profile3"></label>
+                    </div>
                 </div>
             </div>
             
             <!-- GENDER -->
             <div id="gender" class="row-content">
-                <label for="Gender">Gender</label>
+                <label in="genderId" for="Gender">Gender</label>
                 <div class="Genders">
-                    <input type="radio" name="gender" id="m" value="Male">
-                    <label for="m">Male</label>
-                    <input type="radio" name="gender" id="f" value="Female">
-                    <label for="f">Female</label>
+                    <div class="m">
+                        <input type="radio" name="gender" id="m" value="Male">
+                        <label for="m">Male</label>
+                    </div>
+                    <div class="f">
+                        <input type="radio" name="gender" id="f" value="Female">
+                        <label for="f">Female</label>
+                    </div>
                 </div>
             </div>
 
             <!-- DEPARTMENT -->
             <div id="dept" class="row-content">
-                <label>Department</label>
+                <label id="deptId">Department</label>
                 <div class="Depts">
-                    <input type="checkbox" name="Department" value="HR" id="HR">
-                    <label for="HR">HR</label>
-                    <input type="checkbox" name="Department" value="Sales" id="Sales">
-                    <label for="Sales">Sales</label>
-                    <input type="checkbox" name="Department" value="Finance" id="Finance">
-                    <label for="Finance">Finance</label>
-                    <input type="checkbox" name="Department" value="Engineer" id="Engineer">
-                    <label for="Engineer">Engineer</label>
-                    <input type="checkbox" name="Department" value="Others" id="Others">
-                    <label for="Others">Others</label>
+                    <div class="d1">
+                        <input type="checkbox" name="Department" value="HR" id="HR">
+                        <label for="HR">HR</label>
+                    </div>
+                    <div class="d2">
+                        <input type="checkbox" name="Department" value="Sales" id="Sales">
+                        <label for="Sales">Sales</label>
+                    </div>
+                    <div class="d3">
+                        <input type="checkbox" name="Department" value="Finance" id="Finance">
+                        <label for="Finance">Finance</label>
+                    </div>
+                    <div class="d4">
+                        <input type="checkbox" name="Department" value="Engineer" id="Engineer">
+                        <label for="Engineer">Engineer</label>
+                    </div>
+                    <div class="d5">
+                        <input type="checkbox" name="Department" value="Others" id="Others">
+                        <label for="Others">Others</label>
+                    </div>
                 </div>
             </div>
             
             <!-- SALARY -->
             <div id="salary" class="row-content">
-                <label for="Salary">Salary</label>
+                <label id="salaryId" for="Salary">Salary</label>
                 <div class="salaryBar">
                     <input type="range" min="10000" max="100000" name="salary" value="10000" id="Range">
                     <div id="salary_value">10000</div>
@@ -86,7 +110,7 @@
             <!-- START DATE -->
             <div id="startdate" class="row-content">
                 <!-- <input type="date" value="2021-08-02" min="2021-08-02" max="2021-09-02" id="StartDate"> -->
-                <label for="StartDate">Start Date</label>
+                <label id="dateId" for="StartDate">Start Date</label>
 
                 <div class="DateInput">
                     <select name="Day" id="Day">
@@ -146,7 +170,7 @@
 
             <!-- NOTES -->
             <div id="notes" class="row-content">
-                <label for="Notes">Notes</label>
+                <label id="noteId" for="Notes">Notes</label>
                 <textarea name="Notes" id="Notes" placeholder="Enter here..."></textarea>
             </div>
             <div class="buttons">

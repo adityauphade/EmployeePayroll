@@ -3,15 +3,20 @@ var profile = document.getElementsByClassName("ProfileOptions")
 var Name = document.getElementById("nameId")
 const error = `row-content error`;
 const success = `row-content success`;
-const reset = `row-content`;
+const reset_name = `row-content`;
+const reset_date = `DateInput`;
 var validate_bool_name = false;
 var validate_bool_date = false;
 var validate_bool = false;
 
 
-// class EmployeePayroll{
-//     getname{return name}
-
+// class EmployeePayroll
+// let EditKey = localStorage.getItem(`Editkey`);
+// if (EditKey == undefined) {
+    
+// } else {
+    
+// } 
 
 // validate name
 function checkname(ename_tag){
@@ -54,7 +59,6 @@ function checkdate(eday_tag, edate){
     }
 }
 
-// var ename_tag, eprofile_tag, egender_tag, edept, edept_tag, esalary_tag, eday, emonth, eyear, edate, eday_tag, enote_tag;
 //onsubmit
 document.getElementById("empadd-form").onsubmit = function(event){
     event.preventDefault();
@@ -106,11 +110,17 @@ document.getElementById("empadd-form").onsubmit = function(event){
             salary: esalary_tag.value,
             startdate: edate,
             note: enote_tag.value
-        };
+        }
+
+        //call Push to local
+        pushToLocal();
+    }
         
         // push into local storage
+    function pushToLocal(){
         let localPayrolllist = JSON.parse(localStorage.getItem(`EmployeePayrollList`));
         // newdata.id = localPayrolllist.length; 
+        newdata.id = generateKey(); 
         if(localPayrolllist==undefined){
             localPayrolllist = [newdata];
         }
@@ -121,26 +131,54 @@ document.getElementById("empadd-form").onsubmit = function(event){
         localStorage.setItem(`EmployeePayrollList`, JSON.stringify(localPayrolllist));
         
         //redirect to home page
-        window.location.href = "./Home.html"
-        
         validate_bool_date = false;
         validate_bool_name = false;
         validate_bool = false;
+        console.log(numberList)
+
+        window.location.href = "./Home.html"
+        
     }
 
+
 }
 
-function deleteID(node){
-    let localPayrolllist = JSON.parse(localStorage.getItem(`EmployeePayrollList`));
-    let newLocalPayrolllist = [];
-    localPayrolllist.forEach(emp => {
-        if (emp.id != node) {
-            newLocalPayrolllist.push(emp)
+//reset functionality
+document.getElementById("empadd-form").onreset = function(){
+    ename_tag.parentElement.className = reset_name;
+    eday_tag.parentElement.className = reset_date;
+}
+
+//to generate key
+numberList = []
+function generateKey(){
+    var key = Math.floor((Math.random()*1000));
+    var a = numberList.find(element => element == key);
+    
+    if(a != undefined){
+        generateKey();
+    }
+    else{
+        numberList.push(key);
+
+        //stores the key in the local storage
+
+        let localKeys = JSON.parse(localStorage.getItem(`keys`));
+        if (localKeys == undefined) {
+            localKeys = [key];
+            console.log(`ksjsjajsk ${typeof localKeys}`);
         }
-    localStorage.setItem(`EmployeePayrollList`, JSON.stringify(newLocalPayrolllist))
-    })   
-
-    //make the changes in the local storage
-    createTable();
+        else{
+            localKeys.push(key);
+        }
+        localStorage.setItem(`keys`, JSON.stringify(localKeys));
+        
+        return key;
+    }  
 }
+
+
+
+
+
 

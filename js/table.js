@@ -45,12 +45,59 @@ function createTable(){
                 </td>
                 <td class="payroll-table-actions">
                     <img onclick ="deleteID(${obj.id})" src="/assets/Logo/delete.jpg" alt="Delete">
-                    <img src="/assets/Logo/edit.png" alt="Edit"> 
+                    <img onclick ="editID(${obj.id})" src="/assets/Logo/edit.png" alt="Edit"> 
                 </td>
             </tr>
         </tbody>`
     });
-
-    console.log(table_content);
     document.getElementById(`payroll-table`).innerHTML = table_content;
+}
+
+// to delete a selected row
+function deleteID(node){
+    let Payrolllist = JSON.parse(localStorage.getItem(`EmployeePayrollList`));
+    let newPayrolllist = [];
+    Payrolllist.forEach(emp => {
+        if (emp.id != node) {
+            newPayrolllist.push(emp)
+        }
+        localStorage.setItem(`EmployeePayrollList`, JSON.stringify(newPayrolllist))
+    })   
+    
+    let LocalKeyArray = JSON.parse(localStorage.getItem(`keys`));
+    try{
+        // LocalKeyArray.remove(node);
+        let NewLocalKeyArray = LocalKeyArray.filter(k => k!=node)
+        localStorage.setItem(`keys`, JSON.stringify(NewLocalKeyArray));
+    }
+    catch(err){
+        console.log(`no key present in Local storage Keys`)
+    }
+    //make the changes in the local storage
+    createTable();
+}
+
+//to edit the selected row
+function editID(node){
+    localStorage.setItem("Editkey", node);
+    window.location.href = "./EmployeePayroll.html";
+    const id = localStorage.getItem(`key`);
+    console.log(id);
+    let PayrollObjList = JSON.parse(localStorage.getItem(`EmployeePayrollList`));
+    PayrollObjList.forEach(e => {
+        if (e.id === node) {
+            document.getElementById(`nameId`).value = e.name;
+            document.querySelectorAll("input[name=`profiles`]").forEach(n => {
+                if (n.value == e.profile) {n.checked = true;}
+            });
+            document.querySelectorAll("input[name=`gender`]").forEach(n => {
+                if(n.value == e.gender){n.checked = true;}
+            });
+            // console.log(`Hello`)
+        }
+        else{
+            throw `ID NOT FOUND`
+        }
+    })
+
 }

@@ -338,3 +338,12 @@ body{
 .DateInput.success select{
     border-color: #3FA600 !important;
 }
+
+.DateInput select{
+    outline: none;
+
+}
+
+.row-content input{
+    outline: none;
+}

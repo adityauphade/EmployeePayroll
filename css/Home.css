@@ -197,5 +197,45 @@ button{
 }
 
 @media screen and (max-width: 700px){
+    .box{
+        margin-top: 20px;
+    }
+    .outerBox{
+        width: 95%;
+    }
+    table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+    .title{
+        font-size: 18px;
+    }
+    .buttons a{
+        font-size: 15px !important;
+    }
+    #search img{
+        height: 30px;
+    }
+
+    #count{
+        padding: 11px 14px;
+    }
+	
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { 
+        border: 1px solid #ccc; 
+        margin: 20px;
+    }
+	
+	td { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
 
 }

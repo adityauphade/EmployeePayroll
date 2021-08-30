@@ -75,6 +75,10 @@ async function deleteID(node) {
 function editID(node) {
     // localStorage.setItem("Editkey", node);
     window.location.href = `./EmployeePayroll.html?id=${node}`;
+}
 
-
+window.onload = function(){
+    if(!localStorage.getItem('loginKey')){
+        window.location.href = `./Login.html?redirect=${encodeURI(window.location.href)}`
+    }
 }

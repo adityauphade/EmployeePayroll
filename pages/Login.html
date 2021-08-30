@@ -18,10 +18,29 @@
     </header>
     <form id="Login-form">
         
-        <!-- FORM TITLE -->
-        <div id="form-title">Login Form</div>
+        <div class="box">
+            <!-- FORM TITLE -->
+            <div id="form-title">Login Form</div>
+            <!-- EMAIL -->
+            <div class="boxContent">
+                <label for="number">Number</label>
+                <input id="number" name="number" type="text">
+                <small></small>
+            </div>
+            
+            <!-- PASSWORD -->
+            <div class="boxContent">
+                <label for="pwd">Password</label>
+                <input id="pwd" name="pwd" type="password">
+                <small></small>
+            </div>
+        </div>
 
-        
+        <div class="buttonBox">
+            <button id="submitButton" type="submit">Submit</button>
+            <button id="resetButton" type="reset">Reset</button>
+        </div>
     </form>
+    <script src="/js/Login.js"></script>
 </body>
 </html>

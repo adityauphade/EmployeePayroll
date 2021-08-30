@@ -15,6 +15,10 @@ let params;
 
 //edit
 window.onload = async function () {
+    if(!localStorage.getItem('loginKey')){
+        window.location.href = `./Login.html?redirect=${encodeURI(window.location.href)}`
+    }
+
     // check if this is the edit page when the page loads
     const urlSearchParams = new URLSearchParams(window.location.search);
     params = Object.fromEntries(urlSearchParams.entries());
@@ -152,7 +156,6 @@ document.getElementById("empadd-form").onsubmit = function (event) {
     //push to JSON server
     async function pushToJSON(newdata){
         try{
-            // let localPayrolllist = await JSON.parse(makeRequest('get', baseURL, true));
             if (!params.id) {
                 makeRequest('post', baseURL, true, newdata)
             } else {

@@ -1,3 +1,16 @@
 {
-  "EmployeePayrollList": []
+  "EmployeePayrollList": [
+    {
+      "name": "Aditya Uphade",
+      "profile": "/assets/Profiles/Ellipse -1.png",
+      "gender": "Male",
+      "department": [
+        "Sales"
+      ],
+      "salary": "39981",
+      "startdate": "08/18/2021",
+      "note": "",
+      "id": 1
+    }
+  ]
 }

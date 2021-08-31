@@ -23,23 +23,40 @@ header{
     background-color: #FFF;
     width: 100%;
     margin: 0px auto 20px auto;
-
+    display: flex;
 }
 
 .head{
-    margin: auto;
     display: flex;
+    margin: auto;
     width: 90%;
     background-color: #FFF;
     align-items: center;
     font-size: 22px;
+    justify-content: space-between;
 }
 
 
-.head img{
+.head-left img{
     width: 80px;
     padding: 15px;
     margin-left: 20px;
+    display: flex;
+}
+
+.ImageLabel{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.head-right button{
+    font-size: var(--box-input-size);
+    border: 2px solid #505050;
+    border-radius: 5px;
+    color: #505050;
+    padding: 10px 20px;
+    text-align: center;
 }
 
 .h1{
@@ -115,6 +132,7 @@ body{
     text-decoration: none;
     display: flex;
     align-items: center;
+    padding: 0px;
 }
 
 .buttons a{
@@ -127,8 +145,19 @@ button{
 
 }
 
+#searchBar{
+    height: 47px;
+    outline: none;
+    border-radius: 200px;
+    border: 2px solid #505050;
+    box-shadow: 0px 0px 15px 1px #DCDCDC;
+    margin: 0px;
+    padding: 10px;
+    margin-right: 8px;
+}
+
 #search img{
-    height: 40px;
+    height: 43px;
     border-radius: 100px;
     padding: 3px;
     
@@ -139,7 +168,7 @@ button{
     border-radius: 100px;
     border: 2px solid #505050;
     box-shadow: 0px 0px 15px 1px #DCDCDC;
-    margin-right: var(--between-label);
+    margin-right: 24px;
     background-color: #FFF;
     
 }
@@ -193,6 +222,10 @@ button{
     padding: 0px !important;
     border: 20px solid #fff;
     border-radius: 200px;
+}
+
+.rowContent.hide{
+    display: none;
 }
 
 @media screen and (max-width: 700px){

@@ -5,15 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    
 
     <link rel="stylesheet" href="/css/Home.css">
 </head>
 <body>
     <header>
         <div class="head">
-            <img src="/assets/Logo/logo.png" alt="">
-            <div class="h1">Employee<br</div>
-            <div class="h2">Payroll</div>
+            <div class="head-left">
+                <img src="/assets/Logo/logo.png" alt="">
+                <div class="ImageLabel">
+                    <div class="h1">Employee</div>
+                    <div class="h2">Payroll</div>
+                </div>
+            </div>
+            <div class="head-right">
+                <button id="logout">Logout</button>
+            </div>
         </div>
     </header>
     <div class="outerBox">
@@ -23,7 +31,8 @@
               <div id="count">0</div>
             </div>
             <div class="buttons">
-                <button onclick="button" id="search"><img src="/assets/Logo/search.png" alt="search"></button>
+                <input id="searchBar" type="text" placeholder="Enter here...">
+                <button id="search"><img src="/assets/Logo/search.png" alt="search"></button>
                 <a href="/pages/EmployeePayroll.html" id="addUser">Add User</a>
             </div>
           </div>
@@ -33,6 +42,7 @@
         </div>
         <script src="/services/httpReference.js"></script>
         <script src="/js/JSONserverFunctions.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="/js/table.js"></script>
     </body>
     </html>

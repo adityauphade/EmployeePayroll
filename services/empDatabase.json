@@ -8,9 +8,97 @@
         "Sales"
       ],
       "salary": "39981",
-      "startdate": "08/18/2021",
+      "startdate": "08/22/2021",
       "note": "",
       "id": 1
+    },
+    {
+      "name": "Man",
+      "profile": "/assets/Profiles/Ellipse -2.png",
+      "gender": "Female",
+      "department": [
+        "Sales"
+      ],
+      "salary": "92374",
+      "startdate": "08/20/2021",
+      "note": "",
+      "id": 2
+    },
+    {
+      "name": "SolmonnBHai",
+      "profile": "/assets/Profiles/Ellipse -1.png",
+      "gender": "Male",
+      "department": [
+        "HR",
+        "Others"
+      ],
+      "salary": "30241",
+      "startdate": "08/19/2021",
+      "note": "",
+      "id": 3
+    },
+    {
+      "name": "Ramya",
+      "profile": "/assets/Profiles/Ellipse -2.png",
+      "gender": "Male",
+      "department": [
+        "HR"
+      ],
+      "salary": "19342",
+      "startdate": "08/19/2021",
+      "note": "",
+      "id": 4
+    },
+    {
+      "name": "Pappya",
+      "profile": "/assets/Profiles/Ellipse -3.png",
+      "gender": "Male",
+      "department": [
+        "HR",
+        "Sales"
+      ],
+      "salary": "32504",
+      "startdate": "08/17/2021",
+      "note": "",
+      "id": 5
+    },
+    {
+      "name": "Prachi Uphade",
+      "profile": "/assets/Profiles/Ellipse -1.png",
+      "gender": "Male",
+      "department": [
+        "Sales",
+        "Finance"
+      ],
+      "salary": "100000",
+      "startdate": "08/22/2021",
+      "note": "",
+      "id": 6
+    },
+    {
+      "name": "Ganya",
+      "profile": "/assets/Profiles/Ellipse -1.png",
+      "gender": "Female",
+      "department": [
+        "Sales"
+      ],
+      "salary": "27834",
+      "startdate": "08/22/2021",
+      "note": "",
+      "id": 7
+    },
+    {
+      "name": "Pushpa",
+      "profile": "/assets/Profiles/Ellipse -4.png",
+      "gender": "Female",
+      "department": [
+        "Sales",
+        "Finance"
+      ],
+      "salary": "36761",
+      "startdate": "08/18/2021",
+      "note": "",
+      "id": 8
     }
   ]
 }

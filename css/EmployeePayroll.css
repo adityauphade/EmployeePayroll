@@ -26,26 +26,47 @@
 
 header{
     background-color: #FFF;
-    margin-top: 100px;
     width: 100%;
-    /* padding: 100px; */
     margin: 0px auto 20px auto;
+    display: flex;
 }
 
 .head{
-    margin: auto;
     display: flex;
+    margin: auto;
     width: 90%;
     background-color: #FFF;
     align-items: center;
     font-size: 22px;
+    justify-content: space-between;
+}
+
+.head-left{
+    display: flex;
+    align-items: center;
 }
 
 
-.head img{
+.head-left img{
     width: 80px;
     padding: 15px;
     margin-left: 20px;
+    display: flex;
+}
+
+.ImageLabel{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.head-right button{
+    font-size: var(--box-input-size);
+    border: 2px solid #505050;
+    border-radius: 5px;
+    color: #505050;
+    padding: 10px 20px;
+    text-align: center;
 }
 
 .h1{

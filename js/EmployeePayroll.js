@@ -187,6 +187,11 @@ document.getElementById("empadd-form").onreset = function () {
     document.getElementsByClassName("DateInput").className = reset_date;
 }
 
+//cancel button
+document.getElementById("cancelButton").onclick = function (){
+    window.location.href = "./Home.html"
+}
+
 //logout
 document.getElementById("logout").onclick = () => {
     localStorage.removeItem("loginKey");

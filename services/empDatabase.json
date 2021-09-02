@@ -82,23 +82,36 @@
       "department": [
         "Sales"
       ],
-      "salary": "27834",
+      "salary": "100000",
       "startdate": "08/22/2021",
       "note": "",
       "id": 7
+    }
+  ],
+  "credentials": [
+    {
+      "email": "hexabyte.code@gmail.com",
+      "number": "917045788888",
+      "password": "Qwe!2345",
+      "id": 1
     },
     {
-      "name": "Pushpa",
-      "profile": "/assets/Profiles/Ellipse -4.png",
-      "gender": "Female",
-      "department": [
-        "Sales",
-        "Finance"
-      ],
-      "salary": "36761",
-      "startdate": "08/18/2021",
-      "note": "",
-      "id": 8
+      "email": "Bhaya.code@gmail.com",
+      "number": "917045711691",
+      "password": "Dsk!2345",
+      "id": 2
+    },
+    {
+      "email": "aditya.uphade99@gmail.com",
+      "number": "917045711111",
+      "password": "Abc!2345",
+      "id": 3
+    },
+    {
+      "email": "hexab.yasastecode@gmail.com",
+      "number": "917045799999",
+      "password": "Abc!2345",
+      "id": 4
     }
   ]
 }

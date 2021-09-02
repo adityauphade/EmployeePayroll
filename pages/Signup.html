@@ -9,13 +9,6 @@
     <link rel="stylesheet" href="/css/Signup.css">
 </head>
 <body>
-    <header>
-        <div class="head">
-            <img src="/assets/Logo/logo.png" alt="">
-            <div class="h1">Employee<br</div>
-            <div class="h2">Payroll</div>
-        </div>
-    </header>
     <form id="Signup-form">
         
         <div class="box">
@@ -31,7 +24,7 @@
             <!-- Mobile No -->
             <div class="boxContent">
                 <label for="number">Number</label>
-                <input id="number" name="number" type="password">
+                <input id="number" name="number" type="text">
                 <small></small>
             </div>
 
@@ -41,13 +34,22 @@
                 <input id="pwd" name="pwd" type="password">
                 <small></small>
             </div>
+            
+            <!-- PASSWORD2 -->
+            <div class="boxContent">
+                <label for="pwd2">Re-Password</label>
+                <input id="pwd2" name="pwd2" type="password">
+                <small></small>
+            </div>
         </div>
-
+        <small id="alert"></small>
+        <a  id="loginRedirect" href="./Login.html">Login instead?</a>
         <div class="buttonBox">
             <button id="submitButton" type="submit">Submit</button>
             <button id="resetButton" type="reset">Reset</button>
         </div>
     </form>
+    <script src="/js/JSONserverFunctions.js"></script>
     <script src="/js/Signup.js"></script>
 </body>
 </html>

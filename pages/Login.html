@@ -9,18 +9,11 @@
     <link rel="stylesheet" href="/css/Login.css">
 </head>
 <body>
-    <header>
-        <div class="head">
-            <img src="/assets/Logo/logo.png" alt="">
-            <div class="h1">Employee<br</div>
-            <div class="h2">Payroll</div>
-        </div>
-    </header>
     <form id="Login-form">
         
         <div class="box">
             <!-- FORM TITLE -->
-            <div id="form-title">Login</div>
+            <div id="form-title"><h1>Login</h1></div>
             <!-- EMAIL -->
             <div class="boxContent">
                 <label for="number">Number</label>
@@ -35,12 +28,14 @@
                 <small></small>
             </div>
         </div>
-
+        <small id="alert"></small>
+        <a  id="signupRedirect" href="./Signup.html">Sign-up instead?</a>
         <div class="buttonBox">
             <button id="submitButton" type="submit">Submit</button>
             <button id="resetButton" type="reset">Reset</button>
         </div>
     </form>
     <script src="/js/Login.js"></script>
+    <script src="/js/JSONserverFunctions.js"></script>
 </body>
 </html>

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
 
 :root{
     --box-category-titleSize: 25px;
@@ -16,6 +18,12 @@
 
 body{
     background-color: #F6F6F6;
+    background-image: linear-gradient(to bottom right, #B2CE8F , #7D8770);
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
 header{
@@ -50,31 +58,34 @@ header{
 form{
     display: flex;
     flex-direction: column;
-    width: 40%;
-    /* height: 50vh; */
+    width: 45%;
     margin: auto;
     text-align: center;
-    line-height: 2.75;
+    line-height: 2.5;
     background-color: #FFF;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 0px 15px 1px #DCDCDC;
-
+    box-shadow: 0px 0px 15px 1px rgba(29, 25, 25, 0.322);
+    padding-bottom: 30px;
+    border-radius: 10px;
 }
 
 .box{
-    padding: 20px;
-    padding-bottom: 40px;
+    padding: 15px;
     width: 90%;
     
 }
 
 #form-title{
-    text-decoration: underline;
-    font-size: var(--box-category-titleSize);
-    padding: 20px;
-
-
+    text-transform: uppercase;
+    font-size: 45px;
+    padding: 15px;
+    letter-spacing: 20px;  
+    font-weight: 900;
+    background-color: #4158D0;
+    background: -webkit-linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 * label{
@@ -90,20 +101,21 @@ form{
 }
 
 .boxContent{
-    display: flex;
-    align-items: center;
-    padding: 10px;
+    display: grid;
+    grid-template-rows: 2fr 2fr 1.5fr;
+    justify-self: start;
 }
 
 .boxContent label{
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
+    justify-self: start;
 }
 .boxContent input{
-    flex: 3;
+    justify-self: start;
     height: 75%;
-    margin-right: 20px;
+    width: 100%;
+}
+.boxContent small{
+    justify-self: start;
 }
 
 * button{
@@ -112,6 +124,7 @@ form{
     margin: 0px 10px 40px 10px;
     border: 2px solid #000;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .boxContent.error input{
@@ -124,4 +137,47 @@ form{
     
 }
 
+#loginRedirect{
+    color: #99BD51;
+    margin-bottom: 10px;
+    font-weight: lighter;
+}
 
+.buttonBox{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.buttonBox button{
+    margin: auto;
+    width: 40%;
+}
+
+#alert{
+    color: #FF0000;
+}
+
+@media screen and (max-width: 900px) {
+    form{
+        width: 90%;
+    }
+    .boxContent{
+        flex-direction: column;
+        align-items: baseline;
+    }
+    input{
+        width: 100%;
+    }
+    .buttonBox{
+        flex-direction: column;
+    }
+    .buttonBox button{
+        margin: 15px 10px;
+        width: 100%;
+    }
+    .box{
+        padding-bottom: 35px;
+    }
+}

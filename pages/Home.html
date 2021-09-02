@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="/css/Home.css">
 </head>
 <body>
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
     <header>
         <div class="head">
             <div class="head-left">
@@ -20,6 +23,13 @@
                 </div>
             </div>
             <div class="head-right">
+                    <div class="dropdown">
+                        <div class="dropbtn"><img src="/assets/Logo/Admin.png" alt="user pics" /></div>
+                        <div class="dropdown-content">
+                            <a href="#" id="adminEmail"></a>
+                            <a href="#" id="adminPhone"></a>
+                        </div>
+                    </div>
                 <button id="logout">Logout</button>
             </div>
         </div>
@@ -40,6 +50,18 @@
             <table class="payroll-table" id="payroll-table" cellspacing=0>
             </table>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- IF TAKING LONGER LOAD TIME -->
+        <!-- <script>
+            $(window).on('load', function(){
+                $(".loader_bg").fadeOut("slow")
+            });
+        </script> -->
+        <script>
+            setTimeout(function(){
+                $('.loader_bg').fadeToggle();
+            }, 600);
+        </script>
         <script src="/services/httpReference.js"></script>
         <script src="/js/JSONserverFunctions.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

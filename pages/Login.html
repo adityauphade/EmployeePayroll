@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Payroll</title>
+
+    <link rel="stylesheet" href="/css/Login.css">
+</head>
+<body>
+    <header>
+        <div class="head">
+            <img src="/assets/Logo/logo.png" alt="">
+            <div class="h1">Employee<br</div>
+            <div class="h2">Payroll</div>
+        </div>
+    </header>
+    <form id="empadd-form">
+        <div class="box">
+
+            <!-- TITLE -->
+            <div class="title">Employee Payroll Form</div>
+
+            <!-- NAME -->
+            <div id="name" class="row-content">
+                <label for="Name">Name</label>
+                <input id="nameId" name="name" type="text">
+            </div>
+
+            <!-- PROFILE -->
+            <div id="profile" class="row-content">
+                <label for="Profile">Profile</label>
+                <div class="ProfileOptions"> 
+                    <input type="radio" name="profiles" id="p1" value="Profile 1">
+                    <label for="p1"><img src="/assets/Profiles/Ellipse -1.png" alt="profile1"></label>
+                    <input type="radio" name="profiles" id="p2" value="Profile 2">
+                    <label for="p2"><img src="/assets/Profiles/Ellipse -2.png" alt="profile2"></label>
+                    <input type="radio" name="profiles" id="p3" value="Profile 3">
+                    <label for="p3"><img src="/assets/Profiles/Ellipse -3.png" alt="profile3"></label>
+                    <input type="radio" name="profiles" id="p4" value="Profile 4">
+                    <label for="p4"><img src="/assets/Profiles/Ellipse -4.png" alt="profile3"></label>
+                    <input type="radio" name="profiles" id="p5" value="Profile 5">
+                    <label for="p5"><img src="/assets/Profiles/Ellipse -5.png" alt="profile3"></label>
+                </div>
+            </div>
+            
+            <!-- GENDER -->
+            <div id="gender" class="row-content">
+                <label for="Gender">Gender</label>
+                <div class="Genders">
+                    <input type="radio" name="gender" id="m" value="Male">
+                    <label for="m">Male</label>
+                    <input type="radio" name="gender" id="f" value="Female">
+                    <label for="f">Female</label>
+                </div>
+            </div>
+
+            <!-- DEPARTMENT -->
+            <div id="dept" class="row-content">
+                <label>Department</label>
+                <div class="Depts">
+                    <input type="checkbox" name="Department" value="HR" id="HR">
+                    <label for="HR">HR</label>
+                    <input type="checkbox" name="Department" value="Sales" id="Sales">
+                    <label for="Sales">Sales</label>
+                    <input type="checkbox" name="Department" value="Finance" id="Finance">
+                    <label for="Finance">Finance</label>
+                    <input type="checkbox" name="Department" value="Engineer" id="Engineer">
+                    <label for="Engineer">Engineer</label>
+                    <input type="checkbox" name="Department" value="Others" id="Others">
+                    <label for="Others">Others</label>
+                </div>
+            </div>
+            
+            <!-- SALARY -->
+            <div id="salary" class="row-content">
+                <label for="Salary">Salary</label>
+                <div class="salaryBar">
+                    <input type="range" min="10000" max="100000" name="salary" value="10000" id="Range">
+                    <div id="salary_value">10000</div>
+                </div>
+            </div>
+
+
+            <!-- START DATE -->
+            <div id="startdate" class="row-content">
+                <!-- <input type="date" value="2021-08-02" min="2021-08-02" max="2021-09-02" id="StartDate"> -->
+                <label for="StartDate">Start Date</label>
+
+                <div class="DateInput">
+                    <select name="Day" id="Day">
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                    <select name="Month" id="Month">
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                    <select name="Year" id="Year">
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- NOTES -->
+            <div id="notes" class="row-content">
+                <label for="Notes">Notes</label>
+                <textarea name="Notes" id="Notes" placeholder="Enter here..."></textarea>
+            </div>
+            <div class="buttons">
+                <button onclick="button">Cancel</button>
+                <div class="formButtons">
+                    <button type="submit" >Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="/js/salary.js"></script>
+    <script src="/js/validation.js"></script>
+</body>
+</html>

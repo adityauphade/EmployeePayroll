@@ -1,52 +1,78 @@
 Employee Payroll Tasks
 
-uc 2
+UC1 
+Ability to create an Employee
+Payroll System UI - Create an Employee Payroll Form as a
+webpage using HTML, CSS and add a header
+element on top of the UI having text as
+‘Employee Payroll’
+- Create a center align box using div tag - Add a header element on top of box having
+text as ‘Employee Payroll Form’
+- Use flex and CSS properties
+
+
+UC2
 Ability to create a Form
 Header and the Input
 Text Element for Name
 
-UC 3
+
+UC3
 Ability to specify the
 Profile Pic in the Form
 
-uc4- Ability to specify the gender
+
+UC4
+Ability to specify the gender
 as radio button, department
 as checkbox and Salary as
 range indicator
 
-uc5 -Ability to specify the
+
+UC5
+Ability to specify the
 start date with Day,
 Month and Year as
 Select Input Item
 
-uc6 - Ability to add Notes as well
+
+UC6
+Ability to add Notes as well
 as cancel, reset and submit
 button so as to do some
 action on form entry
 
-uc 7  – Adding Media Queries
 
-uc 8 ---Using the UX design
+UC7
+Using the UX design
 set the button style
 appropriately
 
-UC9 -Ability to Set Event
+
+UC8
+Ability to Set Event
 Listener on Salary
 Range to display
 appropriate value
+
+
+UC9
 On Form Submit
 populate the Employee
-
-UC 10 --Payroll Data Object - Write JavaScript function in a separate file - Add additional fields to Employee Payroll as
+Payroll Data Object - Write JavaScript function in a separate file - Add additional fields to Employee Payroll as
 required
 - Perform the validation on the setter method
 
-UC 11 - Perform Validation
+
+UC10
+Perform Validation
 Employee Payroll Data
 setter methods - Name - Name must starts with Cap and has
 minimum 3 characters
 - Start Date
 
+
 – Must not be future date. As well as
 
-should be within 30 days of joining.
+
+should be within 30 days of joininging.
